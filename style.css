@@ -70,3 +70,26 @@ body {
   background: transparent;
   border: 1px solid red;
 }
+.page {
+  text-align: center;
+  padding: 60px;
+}
+
+.small {
+  font-size: 40px;
+}
+
+.card {
+  background: rgba(255,0,0,0.1);
+  border: 1px solid red;
+  padding: 20px;
+  margin: 20px auto;
+  width: 70%;
+  border-radius: 10px;
+}
+
+.timeline div {
+  margin: 10px;
+  font-size: 18px;
+  color: #ddd;
+}
