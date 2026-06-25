@@ -1,92 +1,72 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background: black;
   color: white;
   overflow-x: hidden;
 }
 
-/* background glitch */
-.bg {
+/* VIDEO BACKGROUND */
+.trailer-bg video {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: url("https://i.imgur.com/U3ZQ2XK.png");
-  background-size: cover;
-  opacity: 0.18;
-  animation: smoke 10s infinite linear;
-  z-index: -1;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.4);
 }
 
-@keyframes smoke {
-  0% {transform: scale(1) translate(0,0);}
-  50% {transform: scale(1.1) translate(-15px,10px);}
-  100% {transform: scale(1) translate(0,0);}
+/* DARK OVERLAY */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.4), black);
+  z-index: -1;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 140px 20px;
+  padding-top: 160px;
 }
 
-/* glitch effect */
-.glitch {
-  font-size: 70px;
+/* NETFLIX STYLE TITLE */
+.netflix-title {
+  font-size: 80px;
+  letter-spacing: 5px;
   color: red;
-  text-shadow: 2px 2px 15px black;
-  animation: flicker 1.2s infinite;
+  text-shadow: 0 0 20px black;
+  animation: flicker 1.5s infinite;
 }
 
 @keyframes flicker {
   0% {opacity: 1;}
-  50% {opacity: 0.3;}
+  50% {opacity: 0.4;}
   100% {opacity: 1;}
 }
 
 .tagline {
-  color: #aaa;
-  margin-top: -10px;
-  letter-spacing: 2px;
+  color: #ddd;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-/* buttons */
+/* BUTTONS */
 .buttons {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .btn {
-  display: inline-block;
-  padding: 10px 22px;
-  margin: 5px;
+  padding: 12px 25px;
   background: red;
   color: white;
   text-decoration: none;
+  margin: 5px;
   border-radius: 6px;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
 }
 
 .btn.ghost {
   background: transparent;
   border: 1px solid red;
-}
-
-/* sections */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.section.dark {
-  background: #0a0a0a;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #555;
 }
