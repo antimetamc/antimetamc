@@ -1,1 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
 
+/* background glitch */
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.imgur.com/U3ZQ2XK.png");
+  background-size: cover;
+  opacity: 0.18;
+  animation: smoke 10s infinite linear;
+  z-index: -1;
+}
+
+@keyframes smoke {
+  0% {transform: scale(1) translate(0,0);}
+  50% {transform: scale(1.1) translate(-15px,10px);}
+  100% {transform: scale(1) translate(0,0);}
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 140px 20px;
+}
+
+/* glitch effect */
+.glitch {
+  font-size: 70px;
+  color: red;
+  text-shadow: 2px 2px 15px black;
+  animation: flicker 1.2s infinite;
+}
+
+@keyframes flicker {
+  0% {opacity: 1;}
+  50% {opacity: 0.3;}
+  100% {opacity: 1;}
+}
+
+.tagline {
+  color: #aaa;
+  margin-top: -10px;
+  letter-spacing: 2px;
+}
+
+/* buttons */
+.buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 5px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid red;
+}
+
+/* sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section.dark {
+  background: #0a0a0a;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
